@@ -130,7 +130,7 @@ const NavBar = () => {
                 </Link>
 
                 <Link to={"/signUp"}>
-                  <button className="md:text-[16px] text-sm text-white font-semibold  capitalize py-2 md:px-5 px-4 hover:bg-transparent border-[#8670FF]/40 border-2 bg-[#8670FF]/80 rounded-lg lg:mr-5 ">
+                  <button className="md:text-[16px] text-sm text-white font-semibold  capitalize py-2 md:px-5 px-4 hover:bg-transparent border-[#8670FF] border-2 bg-[#8670FF] rounded-lg lg:mr-5 ">
                     sing up
                   </button>
                 </Link>

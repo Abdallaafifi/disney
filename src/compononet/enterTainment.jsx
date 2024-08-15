@@ -25,14 +25,14 @@ const EnterTainment = () => {
     GetData();
   }, []);
   return (
-    <div className="w-full  my-6 md:my-[6rem] overflow-hidden ">
+    <div className="w-full md:h-[420px] h-[400px]  my-6 md:my-[6rem] overflow-hidden ">
       <h1 className="md:text-[30px] text-[18px] md:mb-6 mb-3 font-sans font-bold capitalize text-white/90">
         {" "}
         What to Watch Tonight
       </h1>
       <div className="relative w-full h-full ">
         <img
-          src="/src/public/assets/images/dark-and-light-abstract-wallpapers-46219-405270-9645566.png"
+          src="./images/dark-and-light-abstract-wallpapers-46219-405270-9645566.png"
           className="absolute inset-0 w-full h-full z-[-1] object-cover"
           alt="img"
         />

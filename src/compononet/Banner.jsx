@@ -15,11 +15,11 @@ const Banner = () => {
       video: "./videos/1564676296-national-geographic.mp4",
     },
     {
-      img: "src/public//images/viewers-pixar.png",
+      img: "./images/viewers-pixar.png",
       video: "./videos/1564676714-pixar.mp4",
     },
     {
-      img: "/public//images/viewers-starwars.png",
+      img: "./images/viewers-starwars.png",
       video: "./videos/1608229455-star-wars.mp4",
     },
   ];
