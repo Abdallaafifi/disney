@@ -25,12 +25,12 @@ const EnterTainment = () => {
     GetData();
   }, []);
   return (
-    <div className="w-full md:h-[500px] h-[400px]  my-6 md:my-[4rem] overflow-hidden ">
+    <div className="w-full  my-6 md:my-[4rem] overflow-hidden ">
       <h1 className="md:text-[30px] text-[18px] md:mb-6 mb-3 font-sans font-bold capitalize text-white/90">
         {" "}
         What to Watch Tonight
       </h1>
-      <div className="relative w-full h-full ">
+      <div className="relative w-full h-[450px] ">
         <img
           src="./images/dark-and-light-abstract-wallpapers-46219-405270-9645566.png"
           className="absolute inset-0 w-full h-full z-[-1] object-cover"
@@ -63,7 +63,7 @@ const EnterTainment = () => {
               <Link
                 to={"/film/" + i?.title}
                 key={x}
-                className="md:min-w-[240px] min-w-[150px] md:h-[330px] h-[220px]  rounded-lg hover:scale-[1.08] duration-[600ms] hover:border-white/90 ease transition overflow-hidden border-[4px] border-[#272727ec] shadow-3xl "
+                className="md:min-w-[240px] min-w-[150px] md:h-[310px] h-[210px]  rounded-lg hover:scale-[1.08] duration-[600ms] hover:border-white/90 ease transition overflow-hidden border-[4px] border-[#272727ec] shadow-3xl "
               >
                 <img
                   src={`https://image.tmdb.org/t/p/original/${i?.poster_path}`}
