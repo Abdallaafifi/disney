@@ -1,0 +1,74 @@
+import axios from "axios";
+import React, { useState } from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { Autoplay, Pagination } from "swiper/modules";
+import { SwiperSlide, Swiper } from "swiper/react";
+import requests from "../DataApi";
+import { addMovie } from "../redux/createSlice";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import "/src/compononet/act/active.css";
+
+import { count } from "firebase/firestore";
+import { Link } from "react-router-dom";
+const Main = () => {
+  const [movies, setMovies] = useState([]);
+  const ref = useRef(null);
+
+  const Width = window.innerWidth;
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  };
+
+  console.log(Width * 8 - 120);
+  const dispatch = useDispatch();
+  const GetData = () => {
+    axios.get(requests.PopularMovies).then((response) => {
+      return setMovies(response.data.results);
+    });
+  };
+
+  useEffect(() => {
+    GetData();
+  }, []);
+  return (
+    <div className="my-10 md:my-[6rem] px-6  w-full flex h-[320px] md:h-[480px] items-center gap-1 relative ">
+      {/* <button id="left">
+        <IoIosArrowBack className="left lg:block hidden  cursor-pointer text-white transition  text-[18px] bg-[#3f3f3f] hover:bg-[#eee] hover:text-black p-1 w-[40px] h-[40px] rounded-lg" />{" "}
+      </button> */}
+      {/* <div ref={ref} className="  h-full w-full  "> */}
+      <Swiper
+        spaceBetween={20}
+        autoplay={true}
+        speed={1000}
+        loop={true}
+        pagination={pagination}
+        modules={[Pagination, Autoplay]}
+      >
+        {movies?.slice(0, 4).map((i, x) => (
+          <SwiperSlide key={x}>
+            <Link to={"/film/" + i.title}>
+              <img
+                src={`https://image.tmdb.org/t/p/original/${i?.backdrop_path}`}
+                alt={i?.title}
+                className=" w-[98%]   h-[260px] md:h-[480px] my-8  mx-auto    shadow-[0_2px_8px_3px_#000] rounded-[14px] object-cover    "
+              />
+            </Link>
+            <div className="absolute md:top-20 top-[80%] md:left-12 left-4 md:text-[40px] text-[15px] antialiased animation">
+              <p className="text-white/75 font-bold tracking-[2px]">
+                {i?.title}
+              </p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};
+export default Main;
+
+//
