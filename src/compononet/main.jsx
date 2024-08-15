@@ -37,10 +37,7 @@ const Main = () => {
   }, []);
   return (
     <div className="my-10 md:my-[6rem] px-6  w-full flex h-[320px] md:h-[480px] items-center gap-1 relative ">
-      {/* <button id="left">
-        <IoIosArrowBack className="left lg:block hidden  cursor-pointer text-white transition  text-[18px] bg-[#3f3f3f] hover:bg-[#eee] hover:text-black p-1 w-[40px] h-[40px] rounded-lg" />{" "}
-      </button> */}
-      {/* <div ref={ref} className="  h-full w-full  "> */}
+     
       <Swiper
         spaceBetween={20}
         autoplay={true}
