@@ -46,7 +46,7 @@ const Movies = ({ title, url, keyId }) => {
         />
         <div
           id={`slider` + keyId}
-          className={` slide   md:mt-0 mt-2 flex items-center justify-between md:min-h-full h-[170px]   cursor-pointer hover:opacity-100 relative gap-4 md:gap-[1.5rem] w-full md:px-2 overflow-x-scroll scroll-smooth   scrollbar-hide `}
+          className={` slide   md:mt-0 mt-2 flex items-center justify-between md:min-h-full min-h-[170px]   cursor-pointer hover:opacity-100 relative gap-4 md:gap-[1.5rem] w-full md:px-2 overflow-x-scroll scroll-smooth   scrollbar-hide `}
         >
           {movies.map((item, id) => (
             <Movie item={item} key={id} />
