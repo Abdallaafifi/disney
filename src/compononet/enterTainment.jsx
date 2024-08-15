@@ -40,7 +40,7 @@ const EnterTainment = () => {
         <div className="flex w-full md:flex-row flex-col md:gap-5 gap-8 items-center h-full md:px-8 px-2 md:py-6 py-4 md:shadow-none shadow-3xl  ">
           <div className="flex flex-col items-center min-w-[400px] md:mr-8 m-0 ">
             <img
-              src="/src/public/assets/images/62d022d6862c6f30f92a9cd0_more.png"
+              src="./images/62d022d6862c6f30f92a9cd0_more.png"
               className="md:w-[320px] w-[230px] "
               alt="img"
             />

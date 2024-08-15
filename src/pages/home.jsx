@@ -12,7 +12,7 @@ const Home = () => {
     <>
       <Main />
       <Banner />
-      <div className="md:px-8 px-4  md:my-[6rem] my-[3rem] min-h-full">
+      <div className="md:px-8 px-3  md:my-[6rem] my-[3rem] min-h-full">
         <Movies
           keyId={"2"}
           title="Action and Adventure"

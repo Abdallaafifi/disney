@@ -20,7 +20,7 @@ const SignUp = () => {
   return (
     <div className="w-full h-screen relative">
       <img
-        src="src/public/assets/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg"
+        src="./images/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg"
         alt="footer.pmg"
         className="w-full h-full hidden sm:block object-cover"
       />
@@ -34,11 +34,13 @@ const SignUp = () => {
               autoComplete=""
               onChange={(e) => setEmail(e.target.value)}
               type="email"
+              placeholder="Email"
               className="bg-[#272626f3] border-none text-sm px-3 py-4 md:py-4 w-full text-[15px]  mb-6 rounded  text-white/90"
             />
             <input
               onChange={(e) => setPassword(e.target.value)}
               type="password"
+              placeholder="password"
               className="bg-[#272626f3] border-none text-sm px-3 py-4 md:py-4  w-full text-[15px] rounded  text-white/90"
             />
             <button
