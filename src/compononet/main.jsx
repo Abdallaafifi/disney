@@ -37,7 +37,6 @@ const Main = () => {
   }, []);
   return (
     <div className="my-10 md:my-[6rem] px-6  w-full flex h-[320px] md:h-[480px] items-center gap-1 relative ">
-     
       <Swiper
         spaceBetween={20}
         autoplay={true}
@@ -48,7 +47,7 @@ const Main = () => {
       >
         {movies?.slice(0, 4).map((i, x) => (
           <SwiperSlide key={x}>
-            <Link to={"/film/" + i.title}>
+            <Link to={"/film/" + i?.title}>
               <img
                 src={`https://image.tmdb.org/t/p/original/${i?.backdrop_path}`}
                 alt={i?.title}
