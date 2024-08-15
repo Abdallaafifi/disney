@@ -49,7 +49,7 @@ const Movie = ({ item }) => {
           }
           onClick={() => dispatch(addMovie(item))}
           className={`
-             md:min-w-[250px] min-w-[85px] md:min-h-[350px] h-[160px] overflow-hidden flex flex-col items-start
+             md:min-w-[250px] min-w-[80px] md:min-h-[350px] h-[160px] overflow-hidden flex flex-col items-start
           my-0 md:my-5 md:hover:scale-[1.06] rounded-[10px]  md:shadow-3xl   relative  hover:border-gray-200 transition duration-500  border-[#2e2e2e] md:border-[3px] `}
         >
           <img

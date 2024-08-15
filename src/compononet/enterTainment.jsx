@@ -25,7 +25,7 @@ const EnterTainment = () => {
     GetData();
   }, []);
   return (
-    <div className="w-full md:h-[420px] h-[400px]  my-6 md:my-[6rem] overflow-hidden ">
+    <div className="w-full md:h-[500px] h-[400px]  my-6 md:my-[4rem] overflow-hidden ">
       <h1 className="md:text-[30px] text-[18px] md:mb-6 mb-3 font-sans font-bold capitalize text-white/90">
         {" "}
         What to Watch Tonight
@@ -41,10 +41,10 @@ const EnterTainment = () => {
           <div className="flex flex-col items-center min-w-[400px] md:mr-8 m-0 ">
             <img
               src="./images/62d022d6862c6f30f92a9cd0_more.png"
-              className="md:w-[320px] w-[230px] "
+              className="md:w-[320px] w-[220px] "
               alt="img"
             />
-            <button className="md:text-[20px] text-[14px] font-bold text-[#fff]/90  md:px-12 px-5  md:py-4 py-3 rounded-lg   bg-slate-800 capitalize">
+            <button className="md:text-[20px] text-[12px] font-bold text-[#fff]/90  md:px-12 px-4  md:py-4 py-2 rounded-lg   bg-slate-800 capitalize">
               view more
             </button>
           </div>
