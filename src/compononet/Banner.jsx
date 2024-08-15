@@ -3,15 +3,15 @@ import React from "react";
 const Banner = () => {
   const Data = [
     {
-      img: "./public/assets/images/viewers-disney.png",
+      img: "../public/assets/images/viewers-disney.png",
       video: "/src/public/assets/videos/1564674844-disney.mp4",
     },
     {
-      img: "./src/public/assets/images/viewers-marvel.png",
+      img: "../public/assets/images/viewers-marvel.png",
       video: "/src/public/assets/videos/1564676115-marvel.mp4",
     },
     {
-      img: "./public/assets/images/viewers-national.png",
+      img: "../public/assets/images/viewers-national.png",
       video: "/src/public/assets/videos/1564676296-national-geographic.mp4",
     },
     {

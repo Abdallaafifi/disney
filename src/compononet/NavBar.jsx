@@ -75,8 +75,8 @@ const NavBar = () => {
         <div className="w-full md:px-8 md:py-2 py-1 px-2  h-full flex items-center gap-12 ">
           <div className="w-[130px] h-full">
             <img
-              src="./public/assets/images/62d28fa7ada60653c679a600_disneylogo.png"
-              alt=""
+              src="../public/assets/images/disney.png"
+              alt="image"
               className="md:w-full w-[90px] h-full   object-cover "
             />
           </div>
