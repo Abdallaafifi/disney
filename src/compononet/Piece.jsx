@@ -64,10 +64,7 @@ const Piece = () => {
   }, []);
   return (
     <>
-      <div
-        key={id}
-        className="  relative w-full h-full   md:px-[4rem] px-[1rem] "
-      >
+      <div key={id} className="  relative w-full h-full   md:px-[3rem] px-4 ">
         <div className="  flex flex-col  items-start  justify-start w-full h-full ">
           <img
             src={`https://image.tmdb.org/t/p/original/${item?.backdrop_path}`}
@@ -81,7 +78,7 @@ const Piece = () => {
             <MdArrowBackIos />
           </Link>
 
-          <div className="absolute top-[120px] md:top-[250px] md:left-[70%] left-[25%] ">
+          <div className="absolute top-[120px] md:top-[230px] md:left-[73%] left-[25%] ">
             {" "}
             <img
               src={`https://image.tmdb.org/t/p/original/${item?.poster_path}`}
@@ -166,7 +163,7 @@ const Piece = () => {
                 details
               </button>
             </div>
-            <div className="w-full overflow-hidden md:mt ml-0 sm:ml-[-2rem] px-0 sm:px-6 min-h-[300px]">
+            <div className="w-full   min-h-[300px]">
               {!active ? (
                 <Movies keyId={"5"} title="" url={requests.topRated} />
               ) : (
