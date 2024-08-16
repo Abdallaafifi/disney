@@ -42,18 +42,18 @@ const Main = () => {
       >
         {movies?.slice(0, 5).map((i, x) => (
           <SwiperSlide key={x}>
-            <Link to={"/film/" + i?.title}>
+            <Link to={"/film/" + i.title}>
               <img
                 src={`https://image.tmdb.org/t/p/original/${i?.backdrop_path}`}
                 alt={i?.title}
                 className=" md:w-[98%] w-[100%]   h-[260px] md:h-[480px] my-8  mx-auto    shadow-[0_2px_8px_3px_#000] rounded-[14px] object-cover    "
               />
+              <div className="absolute md:top-20 top-[80%] md:left-12 left-4 md:text-[40px] text-[15px] antialiased animation">
+                <p className="text-white/75 font-bold tracking-[2px]">
+                  {i?.title}
+                </p>
+              </div>
             </Link>
-            <div className="absolute md:top-20 top-[80%] md:left-12 left-4 md:text-[40px] text-[15px] antialiased animation">
-              <p className="text-white/75 font-bold tracking-[2px]">
-                {i?.title}
-              </p>
-            </div>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -36,7 +36,7 @@ const Banner = () => {
             className="w-full h-full object-cover absolute inset-0 "
           />
           <video
-            src={`${item?.video}`}
+            src={`${item.video}`}
             className="absolute top-0 w-full "
             autoPlay={true}
             playsInline={true}
