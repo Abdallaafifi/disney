@@ -58,7 +58,7 @@ const Movie = ({ item }) => {
           my-0 md:my-5 md:hover:scale-[1.06] hover:scale-[1.01] md:rounded-[10px]   md:shadow-3xl   relative  hover:border-gray-200 transition duration-500  border-[#2e2e2e] md:border-[3px] `}
         >
           <img
-            className=" w-full md:h-full flex-1 min-h-[145px]  rounded-[6px] object-cover shadow-3xl   "
+            className=" md:min-w-full min-w-[110px] md:h-full flex-1 min-h-[145px]  rounded-[6px] object-cover shadow-3xl   "
             src={`https://image.tmdb.org/t/p/original/${item?.poster_path}
           `}
           />
