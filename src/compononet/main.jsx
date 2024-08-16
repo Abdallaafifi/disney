@@ -40,7 +40,7 @@ const Main = () => {
         pagination={pagination}
         modules={[Pagination, Autoplay]}
       >
-        {movies?.slice(0, 6).map((i, x) => (
+        {movies?.slice(0, 5).map((i, x) => (
           <SwiperSlide key={x}>
             <Link to={"/film/" + i?.title}>
               <img

@@ -129,7 +129,7 @@ const Piece = () => {
 
                   setIcon(!icon);
                 }}
-                className={`flex items-center md:text-[20px] text-[12px]  transition rounded-full  text-white/80 md:p-4 p-[12px]  ml-2   font-bold ${
+                className={`flex items-center md:text-[20px] text-[12px]  transition rounded-full  hover:text-black text-white/80 md:p-4 p-[12px]  ml-2   font-bold ${
                   icon && "bg-gray-100 text-[#1b1b1b]"
                 }`}
               >
@@ -208,6 +208,12 @@ const Piece = () => {
           )}
         </div>
       </div>
+      {active && (
+        <div id="note" key={1} className="note text-[#018b2b]">
+          {exist?.original_name}
+          <span className="text-black ml-1"> has been added</span>
+        </div>
+      )}
     </>
   );
 };

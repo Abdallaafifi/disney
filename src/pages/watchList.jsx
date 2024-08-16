@@ -25,7 +25,7 @@ const WatchListed = () => {
   return (
     <>
       <NavBar />
-      <div className="w-full min-h-full">
+      <div className="w-full ">
         <img
           src={"./images/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg"}
           alt="img"
@@ -35,7 +35,7 @@ const WatchListed = () => {
         <h1 className="capitalize  my-6 md:px-8 px-4 font-bold text-white md:text-3xl text-[22px] md:text-[30px]">
           watch list
         </h1>
-        <div className="flex gap-6 w-full flex-col min-h-screen md:px-8 px-4 md:justify-start justify-start items-start md:items-start">
+        <div className="flex gap-6 w-full flex-col  md:px-8 px-3 mb-[5rem] md:justify-start justify-start items-start md:items-start">
           {list.length ? (
             list.map((i) => (
               <div className="flex items-start w-full justify-between md:h-[200px] h-[90px]">

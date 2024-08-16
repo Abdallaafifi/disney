@@ -72,8 +72,8 @@ const NavBar = () => {
           scroll ? "bg-main/10" : "bg-transparent"
         } md:h-[90px] h-[60px] fixed w-screen top-0 left-0  mb-2 z-[1000] transition `}
       >
-        <div className="w-full md:px-8 md:py-2 py-1 px-2  h-full flex items-center gap-8 ">
-          <div className="w-[190px] h-full">
+        <div className="w-full md:px-8 md:py-2 py-1 px-1  h-full flex items-center justify-between gap-0 md:gap-8 ">
+          <div className="sm:w-[190px] w-[130px] h-full">
             <img
               src="./images/viewers-pixar.png"
               alt="img"
@@ -122,7 +122,7 @@ const NavBar = () => {
                 </button>
               </div>
             ) : (
-              <div className="md:mr-8 mr-2">
+              <div className="md:mr-8 mr-2 flex">
                 <Link to={"/logIn"}>
                   <button className="md:text-[16px] text-sm text-white font-semibold capitalize mx-4">
                     sing in{" "}
@@ -130,7 +130,7 @@ const NavBar = () => {
                 </Link>
 
                 <Link to={"/signUp"}>
-                  <button class="bg-[#0082c4e5] hover:bg-[#08c]/80  md:px-[18px] px-[10px] md:py-[12px] py-[5px]   md:text-[16px] text-sm  text-white font-[600] md:font-bold  rounded capitalize">
+                  <button class="bg-[#0082c4e5] hover:bg-[#08c]/80  md:px-[18px] px-[8px] md:py-[12px] py-[5px]   md:text-[16px] text-sm  text-white font-[600] md:font-bold  rounded capitalize">
                     sign up
                   </button>
                 </Link>

@@ -34,7 +34,7 @@ const MoviesPG = () => {
         movies
       </h1>
 
-      <div className=" grid   md:grid-cols-4  grid-cols-3 place-items-center gap-8 pb-2 md:pb-[2rem] ">
+      <div className=" grid   md:grid-cols-5  grid-cols-3 place-items-center md:gap-14 gap-[6px] pb-2 md:pb-[2rem] ">
         {Data && Data?.map((i, x) => <Movie item={i} />)}
 
         {sed && Data2 && Data2?.map((i, x) => <Movie item={i} />)}
