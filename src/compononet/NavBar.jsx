@@ -73,11 +73,11 @@ const NavBar = () => {
         } md:h-[90px] h-[60px] fixed w-screen top-0 left-0  mb-2 z-[1000] transition `}
       >
         <div className="w-full md:px-8 md:py-2 py-1 px-2  h-full flex items-center gap-12 ">
-          <div className="w-[130px] h-full">
+          <div className="w-[150px] h-full">
             <img
-              src="./images/disney.png"
-              alt="image"
-              className="md:w-full w-[90px] h-full   object-cover "
+              src="/public/images/viewers-pixar.png"
+              alt=""
+              className="md:w-full w-[110px] h-full  md:ml-0 ml-[-12px]  object-cover "
             />
           </div>
           <ul className="flex  md:gap-6  items-center font-sans down ">
@@ -108,7 +108,7 @@ const NavBar = () => {
                 <Link to={"/Account"}>
                   <button className="  rounded-lg hover:bg-white/30  p-1 transition   capitalize mx-4">
                     <MdAccountCircle
-                      size={28}
+                      size={26}
                       className="  transition text-white "
                     />
                   </button>
@@ -116,7 +116,7 @@ const NavBar = () => {
 
                 <button
                   onClick={() => handelLogOut()}
-                  className="text-[16px] text-black hover:text-white overflow-hidden transition font-semibold hover:bg-transparent border-red-600 border-2 capitalize py-2 px-4 bg-red-600 rounded hover:border-white/60   "
+                  className="md:text-[16px] text-sm text-black hover:text-white overflow-hidden transition font-semibold hover:bg-transparent border-red-600 border-2 capitalize py-1 md:py-2 px-4 bg-red-600 rounded hover:border-white/60   "
                 >
                   log out
                 </button>
@@ -130,8 +130,8 @@ const NavBar = () => {
                 </Link>
 
                 <Link to={"/signUp"}>
-                  <button className="md:text-[16px] text-sm text-white font-semibold  capitalize py-2 md:px-5 px-4 hover:bg-transparent border-[#8670FF] border-2 bg-[#8670FF] rounded-lg lg:mr-5 ">
-                    sing up
+                  <button class="bg-[#0082c4e5] hover:bg-[#08c]/80  px-[12px] py-[5px]   md:text-[16px] text-sm  text-white font-[600] md:font-bold  rounded capitalize">
+                    sign up
                   </button>
                 </Link>
               </div>
@@ -145,70 +145,4 @@ const NavBar = () => {
 
 export default NavBar;
 
-//  <div
-//    className={` w-full px-8  fixed top-0 left-0 py-2 z-[100] transition-[.6s ease ] ${bg_scroll}`}
-//  >
-//    <div className="flex  items-center">
-//      <Link to={"/"}>
-//        <h1 className="text-red-600 text-2xl md:text-4xl flex-shrink capitalize w-[150px]">
-//          movies
-//        </h1>
-//      </Link>
-//      <form className="flex overflow-hidden rounded-md items-start   bg-[#dad2d228] w-[350px] md:w-[430px] h-10  ">
-//        <button className="w-12  bg-red-600 text-white h-full capitalize flex items-center">
-//          <IoIosSearch className="w-full" size={18} />
-//        </button>
-//        <input
-//          type="text"
-//          placeholder="search about movies from here"
-//          className="w-full border-none outline-none h-full px-2  bg-transparent placeholder:text-sm truncate text-white/60 "
-//        />
-//      </form>
-//      <div className="flex items-center w-full justify-end flex-1  ">
-//        <div className="md:grid hidden grid-cols-3  gap-2">
-//          <NavLink className={Hover} to={"/movies"}>
-//            Movies
-//          </NavLink>
-//          <NavLink to={"/aboutus"} className={Hover}>
-//            About us
-//          </NavLink>
-//          <NavLink className={Hover} to={"/contact"}>
-//            Contact us
-//          </NavLink>
-//        </div>
-//        {user?.email ? (
-//          <div className="flex items-center">
-//            <Link to={"/Account"}>
-//              <button className="  rounded-lg hover:bg-white/30  p-1 transition   capitalize mx-4">
-//                <MdAccountCircle
-//                  size={28}
-//                  className="  transition text-white "
-//                />
-//              </button>
-//            </Link>
-
-//            <button
-//              onClick={() => handelLogOut()}
-//              className="text-[16px] text-black hover:text-white overflow-hidden transition font-semibold hover:bg-transparent border-red-600 border-2 capitalize py-2 px-4 bg-red-600 rounded hover:border-white/60   "
-//            >
-//              log out
-//            </button>
-//          </div>
-//        ) : (
-//          <div className="">
-//            <Link to={"/logIn"}>
-//              <button className="text-[16px] text-white font-semibold capitalize mx-4">
-//                sing in{" "}
-//              </button>
-//            </Link>
-
-//            <Link to={"/signUp"}>
-//              <button className="text-[16px] text-white font-semibold  capitalize py-2 px-4 bg-red-600 rounded  ">
-//                sing up
-//              </button>
-//            </Link>
-//          </div>
-//        )}
-//      </div>
-//    </div>
-//  </div>;
+//

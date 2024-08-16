@@ -14,9 +14,6 @@ import { count } from "firebase/firestore";
 import { Link } from "react-router-dom";
 const Main = () => {
   const [movies, setMovies] = useState([]);
-  const ref = useRef(null);
-
-  const Width = window.innerWidth;
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -24,8 +21,6 @@ const Main = () => {
     },
   };
 
-  console.log(Width * 8 - 120);
-  const dispatch = useDispatch();
   const GetData = () => {
     axios.get(requests.PopularMovies).then((response) => {
       return setMovies(response.data.results);
@@ -36,7 +31,7 @@ const Main = () => {
     GetData();
   }, []);
   return (
-    <div className="my-10 md:my-[6rem] px-6  w-full flex h-[320px] md:h-[480px] items-center gap-1 relative ">
+    <div className="my-10 md:my-[6rem] px-3  w-full flex h-[320px] md:h-[480px] items-center gap-1 relative ">
       <Swiper
         spaceBetween={20}
         autoplay={true}
@@ -45,13 +40,13 @@ const Main = () => {
         pagination={pagination}
         modules={[Pagination, Autoplay]}
       >
-        {movies?.slice(0, 4).map((i, x) => (
+        {movies?.slice(0, 6).map((i, x) => (
           <SwiperSlide key={x}>
             <Link to={"/film/" + i?.title}>
               <img
                 src={`https://image.tmdb.org/t/p/original/${i?.backdrop_path}`}
                 alt={i?.title}
-                className=" w-[98%]   h-[260px] md:h-[480px] my-8  mx-auto    shadow-[0_2px_8px_3px_#000] rounded-[14px] object-cover    "
+                className=" md:w-[98%] w-[100%]   h-[260px] md:h-[480px] my-8  mx-auto    shadow-[0_2px_8px_3px_#000] rounded-[14px] object-cover    "
               />
             </Link>
             <div className="absolute md:top-20 top-[80%] md:left-12 left-4 md:text-[40px] text-[15px] antialiased animation">

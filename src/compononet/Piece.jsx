@@ -1,10 +1,16 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { FaPlay, FaPlus, FaStar } from "react-icons/fa";
-import { MdBoy } from "react-icons/md";
+import {
+  FaArrowLeft,
+  FaBackward,
+  FaPlay,
+  FaPlus,
+  FaStar,
+} from "react-icons/fa";
+import { MdArrowBack, MdArrowBackIos, MdBoy } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import requests from "../DataApi";
 import Movies from "./movies";
@@ -68,7 +74,14 @@ const Piece = () => {
             alt="backdrop"
             className="fixed top-0 left-0 w-full -z-20 min-h-full  object-cover blur-sm"
           />
-          <div className="absolute top-[120px] md:top-[340px] md:left-[70%] left-[25%] ">
+          <Link
+            to={"/"}
+            className="absolute top-[5%] left-[5%] text-[25px] text-white/70 font-bold cursor-pointer"
+          >
+            <MdArrowBackIos />
+          </Link>
+
+          <div className="absolute top-[120px] md:top-[250px] md:left-[70%] left-[25%] ">
             {" "}
             <img
               src={`https://image.tmdb.org/t/p/original/${item?.poster_path}`}
@@ -80,7 +93,7 @@ const Piece = () => {
           <div className=" bg-black/65 absolute top-0 left-0 min-h-screen w-full bottom-0 -z-[1]"></div>
           <div className="flex items-start  flex-col  z-[100] w-full  mt-[27rem] md:mt-[30rem]     ">
             <div className="flex flex-wrap items-center  gap-4 ">
-              <h1 className="text-white/90 text-[22px] md:text-[40px] font-bold text-serif capitalize mr-2 leading-[15px]">
+              <h1 className="text-white/90 text-[22px] md:text-[40px] font-bold text-serif capitalize mr-2 leading-[18px]">
                 {item?.title}
               </h1>
               <button className="  text-[12px] md:text-[16px]   text-white/60 bg-transparent">
@@ -96,7 +109,7 @@ const Piece = () => {
               </button>
             </div>
             <div>
-              <p className="md:text-base text-[12px] my-2 sm:my-4 text-gray-100/90">
+              <p className="md:text-base text-[12px] my-2 sm:my-4 text-gray-300/90">
                 Mystery, Comedy, Animation
               </p>
             </div>
@@ -119,9 +132,11 @@ const Piece = () => {
 
                   setIcon(!icon);
                 }}
-                className="flex items-center md:text-[20px] text-[12px] hover:bg-gray-100 transition rounded-full hover:text-[#1b1b1b] text-white/80 md:p-4 p-[12px]  ml-2   font-bold"
+                className={`flex items-center md:text-[20px] text-[12px]  transition rounded-full  text-white/80 md:p-4 p-[12px]  ml-2   font-bold ${
+                  icon && "bg-gray-100 text-[#1b1b1b]"
+                }`}
               >
-                {!icon ? <FaPlus size={14} /> : <FaCheck size={14} />}{" "}
+                {!icon ? <FaPlus size={15} /> : <FaCheck size={15} />}{" "}
                 <p className="ml-1"> Add to list</p>
               </button>
             </div>
@@ -168,7 +183,7 @@ const Piece = () => {
                       photosensitive viewers.
                     </p>
                   </div>
-                  <div className="flex flex-col gap-3 items-start md:mt-0 my-8 text-white/70 capitalize text-sm sm:text-[16px] w-full md:min-w-[500px]">
+                  <div className="flex flex-col gap-3 items-start md:mt-0 my-8 text-white/70 capitalize text-[12px]  sm:text-[16px] w-full md:min-w-[500px]">
                     <p>release_date: {item?.release_date}</p>
                     <p>Genre: Mystery, Comedy, Animation</p>
                     <p>rating: +13</p>

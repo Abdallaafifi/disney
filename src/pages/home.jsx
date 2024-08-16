@@ -12,7 +12,7 @@ const Home = () => {
     <>
       <Main />
       <Banner />
-      <div className="md:px-8 px-3  md:my-[6rem] my-[3rem] min-h-full">
+      <div className="md:px-8 px-[8px]  md:my-[6rem] my-[3rem] min-h-full">
         <Movies
           keyId={"2"}
           title="Action and Adventure"
@@ -25,12 +25,8 @@ const Home = () => {
           title="New to Disney+"
           url={requests.PopularMovies}
         />
-        <Movies
-          keyId={"3"}
-          margin="100px"
-          title="Trending"
-          url={requests.tvSeries}
-        />
+        <Movies keyId={"3"} title="Trending" url={requests.tvSeries} />
+        <Movies keyId={"5"} title="on the air" url={requests.Upcoming} />
       </div>
       <Sliders />
     </>

@@ -15,6 +15,7 @@ import Series from "./compononet/Series";
 import SeriesPG from "./pages/seriesPG";
 import WatchList from "./redux/addToList";
 import WatchListed from "./pages/watchList";
+import { useEffect } from "react";
 export const Items = () => {
   const data = JSON.parse(localStorage.getItem("new"));
   const [color, setColor] = useState();
@@ -95,31 +96,44 @@ export const Items = () => {
     </>
   );
 };
-
 const App = () => {
+  const [load, setLoad] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 2000);
+  }, []);
   return (
     <>
-      <AuthContextProvider>
-        <NavBar />
-        <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/logIn" Component={LogIn} />
-          <Route path="/signUp" Component={SignUp} />
-          <Route path="/film/:id" Component={Piece} />
-          <Route path="/movies" Component={MoviesPG} />
-          <Route path="/series/" Component={SeriesPG} />
-          <Route path="/watchlist" Component={WatchListed} />
-          <Route path="/series/:id" Component={Series} />
-          <Route
-            path="/Account"
-            element={
-              <ProtectAuth>
-                <Account />
-              </ProtectAuth>
-            }
-          />
-        </Routes>
-      </AuthContextProvider>
+      {load ? (
+        <div className="w-full h-full  load">
+          <div class="loader">
+            <span></span>
+          </div>
+        </div>
+      ) : (
+        <AuthContextProvider>
+          <NavBar />
+          <Routes>
+            <Route path="/" Component={Home} />
+            <Route path="/logIn" Component={LogIn} />
+            <Route path="/signUp" Component={SignUp} />
+            <Route path="/film/:id" Component={Piece} />
+            <Route path="/movies" Component={MoviesPG} />
+            <Route path="/series/" Component={SeriesPG} />
+            <Route path="/watchlist" Component={WatchListed} />
+            <Route path="/series/:id" Component={Series} />
+            <Route
+              path="/Account"
+              element={
+                <ProtectAuth>
+                  <Account />
+                </ProtectAuth>
+              }
+            />
+          </Routes>
+        </AuthContextProvider>
+      )}
     </>
   );
 };

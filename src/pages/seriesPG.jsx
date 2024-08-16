@@ -28,13 +28,13 @@ const SeriesPG = () => {
   return (
     <div
       id="movies"
-      className="w-full   flex flex-col sm:px-6 px-8  my-[6rem] "
+      className="w-full   flex flex-col sm:px-6 px-3  my-[6rem] "
     >
       <h1 className="md:text-[48px] text-[26px] font-bold font-sans text-white capitalize mb-6">
         tv series
       </h1>
 
-      <div className=" grid  lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-cols-3 place-items-center gap-8 pb-2 md:pb-[2rem] ">
+      <div className=" grid   md:grid-cols-5 sm:grid-cols-4 grid-cols-3 place-items-center gap-  pb-2 md:pb-[2rem] ">
         {Data && Data?.map((i, x) => <Movie item={i} />)}
 
         {sed && Data2 && Data2?.map((i, x) => <Movie item={i} />)}

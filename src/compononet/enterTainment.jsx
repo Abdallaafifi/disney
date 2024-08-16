@@ -30,7 +30,7 @@ const EnterTainment = () => {
         {" "}
         What to Watch Tonight
       </h1>
-      <div className="relative w-full h-[450px] ">
+      <div className="relative w-full md:h-[450px] h-full ">
         <img
           src="./images/dark-and-light-abstract-wallpapers-46219-405270-9645566.png"
           className="absolute inset-0 w-full h-full z-[-1] object-cover"
@@ -41,10 +41,10 @@ const EnterTainment = () => {
           <div className="flex flex-col items-center min-w-[400px] md:mr-8 m-0 ">
             <img
               src="./images/62d022d6862c6f30f92a9cd0_more.png"
-              className="md:w-[320px] w-[220px] "
+              className="md:w-[310px] w-[210px] "
               alt="img"
             />
-            <button className="md:text-[20px] text-[12px] font-bold text-[#fff]/90  md:px-12 px-4  md:py-4 py-2 rounded-lg   bg-slate-800 capitalize">
+            <button className="md:text-[20px] text-[12px] font-bold text-[#fff]/90  md:px-12 px-5  md:py-4 py-2 rounded-lg   bg-slate-800 capitalize">
               view more
             </button>
           </div>
@@ -53,17 +53,17 @@ const EnterTainment = () => {
               slide("prev");
             }}
           >
-            <MdArrowBackIos className="text-[40px] mr-[-10px] cursor-pointe text-white md:block hidden" />
+            <MdArrowBackIos className="text-[40px]  cursor-pointe text-white md:block hidden" />
           </button>
           <div
             ref={slider}
             className=" h-full w-full  flex gap-6 items-center overflow-x-scroll md-py-0  md:px-4 px-2 scrollbar-hide scroll-smooth "
           >
-            {data.map((i, x) => (
+            {data?.map((i, x) => (
               <Link
                 to={"/film/" + i?.title}
                 key={x}
-                className="md:min-w-[240px] min-w-[150px] md:h-[310px] h-[210px]  rounded-lg hover:scale-[1.08] duration-[600ms] hover:border-white/90 ease transition overflow-hidden border-[4px] border-[#272727ec] shadow-3xl "
+                className="md:min-w-[240px] min-w-[130px] md:h-[310px] h-[185px]  rounded-[6px] hover:scale-[1.08] duration-[500ms] hover:border-white/90 ease transition overflow-hidden border-[2px] md:border-[4px] border-[#272727ec] shadow-3xl "
               >
                 <img
                   src={`https://image.tmdb.org/t/p/original/${i?.poster_path}`}

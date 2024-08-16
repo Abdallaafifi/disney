@@ -27,9 +27,7 @@ const WatchListed = () => {
       <NavBar />
       <div className="w-full min-h-full">
         <img
-          src={
-            "/src/public/assets/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg"
-          }
+          src={"./images/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg"}
           alt="img"
           className="w-full h-[250px] md:h-[450px] object-cover"
         />
@@ -53,7 +51,7 @@ const WatchListed = () => {
                     Sci-Fi & Fantasy, Drama, Action & Adventure
                   </p>
                 </div>
-                <div className="md:w-[140px] w-[80px] h-full">
+                <div className="md:w-[140px] w-[80px] h-full flex items-end justify-end">
                   <img
                     src={`https://image.tmdb.org/t/p/original/${i?.poster_path}`}
                     alt=""
@@ -62,7 +60,7 @@ const WatchListed = () => {
                 </div>
                 <MdRemoveCircle
                   onClick={() => dispatch(Filter(i?.id))}
-                  className="self-center md:text-[32px] text-[20px] mx-1 md:mx-4 text-white/60 cursor-pointer"
+                  className="self-center md:text-[32px] text-[20px] ml-3 md:ml-4 text-white/50 cursor-pointer"
                 />
               </div>
             ))

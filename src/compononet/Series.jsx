@@ -2,9 +2,9 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { FaCheck, FaPlay, FaPlus, FaStar } from "react-icons/fa";
-import { MdBoy } from "react-icons/md";
+import { MdArrowBackIos, MdBoy } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import requests from "../DataApi";
 import { addToList, Filter } from "../redux/addToList";
@@ -68,6 +68,12 @@ const Series = () => {
             alt="backdrop"
             className="fixed top-0 left-0 w-full -z-20 min-h-full  object-cover blur-sm"
           />
+          <Link
+            to={"/"}
+            className="absolute top-[5%] left-[5%] text-[25px] text-white/70 font-bold cursor-pointer"
+          >
+            <MdArrowBackIos />
+          </Link>
           <div className="absolute top-[120px] md:top-[340px] md:left-[70%] left-[25%] ">
             {" "}
             <img
@@ -80,7 +86,7 @@ const Series = () => {
           <div className=" bg-black/65 absolute top-0 left-0 min-h-screen w-full bottom-0 -z-[1]"></div>
           <div className="flex items-start  flex-col  z-[100] w-full  mt-[27rem] md:mt-[30rem]     ">
             <div className="flex flex-wrap items-center  gap-4 ">
-              <h1 className="text-white/90 text-[22px] md:text-[40px] font-bold text-serif capitalize mr-2 leading-[15px]">
+              <h1 className="text-white/90 text-[22px] md:text-[40px] font-bold text-serif capitalize mr-2 leading-[18px]">
                 {item?.original_name}
               </h1>
               <button className="  text-[12px] md:text-[16px]   text-white/60 bg-transparent">
@@ -96,7 +102,7 @@ const Series = () => {
               </button>
             </div>
             <div>
-              <p className="md:text-base text-[12px] my-2  md:mt-0 mt-2  sm:my-4 text-gray-100/90">
+              <p className="md:text-base text-[12px] my-2  md:mt-0 mt-2  sm:my-4 text-gray-300/90">
                 Mystery, Comedy, Animation
               </p>
             </div>
@@ -117,7 +123,7 @@ const Series = () => {
                 onClick={() => {
                   dispatch(addToList(item));
 
-                  setIcon(!icon);
+                  setAdd(!add);
                 }}
                 className="flex items-center md:text-[20px] text-[12px] hover:bg-gray-100 transition rounded-full hover:text-[#1b1b1b] text-white/80 md:p-4 p-[12px]  ml-2   font-bold"
               >
@@ -168,7 +174,7 @@ const Series = () => {
                       photosensitive viewers.
                     </p>
                   </div>
-                  <div className="flex flex-col gap-3 items-start md:mt-0 my-8 text-white/70 capitalize text-sm sm:text-[16px] w-full md:min-w-[500px]">
+                  <div className="flex flex-col gap-3 items-start md:mt-0 my-8 text-white/70 capitalize text-[12px] sm:text-[16px] w-full md:min-w-[500px]">
                     <p>release_date: {item?.release_date}</p>
                     <p>Genre: Mystery, Comedy, Animation</p>
                     <p>rating: +13</p>
