@@ -54,7 +54,7 @@ const Movie = ({ item }) => {
               ? "min-w-[100px]"
               : "min-w-[92px]"
           }
-             md:min-w-[250px] min-w-[102px] md:min-h-[350px]  overflow-hidden flex flex-col gap-1 items-start
+             md:min-w-[250px] min-w-[110px] md:min-h-[350px]  overflow-hidden flex flex-col gap-1 items-start
           my-0 md:my-5 md:hover:scale-[1.06] hover:scale-[1.01] md:rounded-[10px]   md:shadow-3xl   relative  hover:border-gray-200 transition duration-500  border-[#2e2e2e] md:border-[3px] `}
         >
           <img
