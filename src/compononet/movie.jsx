@@ -54,20 +54,20 @@ const Movie = ({ item }) => {
               ? "min-w-[100px]"
               : "min-w-[92px]"
           }
-             md:min-w-[250px] min-w-[90px] md:min-h-[350px]  overflow-hidden flex flex-col gap-1 items-start
+             md:min-w-[250px] min-w-[96px] md:min-h-[350px]  overflow-hidden flex flex-col gap-1 items-start
           my-0 md:my-5 md:hover:scale-[1.06] hover:scale-[1.01] md:rounded-[10px]   md:shadow-3xl   relative  hover:border-gray-200 transition duration-500  border-[#2e2e2e] md:border-[3px] `}
         >
           <img
-            className=" min-w-[100%] md:h-full flex-1 min-h-[135px]  rounded-[6px] object-cover shadow-3xl   "
+            className=" min-w-[100%] md:h-full flex-1 min-h-[140px]  rounded-[6px] object-cover shadow-3xl   "
             src={`https://image.tmdb.org/t/p/original/${item?.poster_path}
           `}
           />
-          <div className="bg-black/85 md:rounded-lg rounded-[4px]  text-white absolute top-1 right-1 z-[5]">
+          <div className="bg-black/75 md:rounded-lg rounded-[4px]  text-white absolute top-1 right-1 z-[5]">
             <p
-              className={`  md:text-[16px]  text-[10px] text-center leading-none font-[600] ${
+              className={`  md:text-[16px]  text-[11px] text-center leading-none font-[600] ${
                 item.vote_count < 1000
                   ? ""
-                  : "md:px-4 md:py-[6.8px] px-[5px] py-[3px] "
+                  : "md:px-4 md:py-[6.8px] px-[5.5px] py-[3px] "
               }`}
             >
               {
