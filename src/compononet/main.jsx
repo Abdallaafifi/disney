@@ -42,7 +42,7 @@ const Main = () => {
       >
         {movies?.slice(0, 5).map((i, x) => (
           <SwiperSlide key={x}>
-            <Link to={"/film/" + i.title}>
+            <Link to={"/film/" + i?.title}>
               <img
                 src={`https://image.tmdb.org/t/p/original/${i?.backdrop_path}`}
                 alt={i?.title}
