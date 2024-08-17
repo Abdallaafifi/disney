@@ -1,5 +1,6 @@
 // import { data } from "autoprefixer";
 import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import Banner from "../compononet/Banner";
 import EnterTainment from "../compononet/enterTainment";
 import Main from "../compononet/main";

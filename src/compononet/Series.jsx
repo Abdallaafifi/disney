@@ -125,7 +125,9 @@ const Series = () => {
 
                   setAdd(!add);
                 }}
-                className="flex items-center md:text-[20px] text-[12px]  hover:bg-gray-100 transition rounded-full hover:text-[#1b1b1b] text-white/80 md:p-4 p-[12px]  ml-2   font-bold"
+                className={`flex items-center md:text-[20px] text-[12px]   transition rounded-full md:p-4 p-[12px]  ml-2   font-bold ${
+                  add ? "bg-gray-100 text-black " : "bg-transparent text-white"
+                }`}
               >
                 {!add ? <FaPlus size={14} /> : <FaCheck size={14} />}{" "}
                 <p className="ml-1"> Add to list</p>

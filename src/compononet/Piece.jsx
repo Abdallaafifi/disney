@@ -15,7 +15,7 @@ import YouTube from "react-youtube";
 import requests from "../DataApi";
 import Movies from "./movies";
 import { FaCheck } from "react-icons/fa6";
-import { addToList, Filter } from "../redux/addToList";
+import { addToList } from "../redux/addToList";
 
 const Piece = () => {
   const [active, setActive] = useState();
@@ -27,6 +27,11 @@ const Piece = () => {
   const data = useSelector((state) => state.Movie);
   const item = data.find((i) => i.title === id);
   const key = videos.find((i) => i.name === "Official Trailer");
+  if (active) {
+    setTimeout(() => {
+      document.getElementById("note").classList.add("hide");
+    }, 4000);
+  }
 
   const opts = {
     width: "100%",
@@ -38,11 +43,6 @@ const Piece = () => {
   const dispatch = useDispatch();
   const select = useSelector((state) => state.List);
   const exist = select.find((i) => i.id === item.id);
-  console.log(exist);
-
-  setTimeout(() => {
-    document.querySelector(".note").classList.add("hide");
-  }, 4000);
 
   const GetVideo = async () => {
     try {
@@ -58,7 +58,6 @@ const Piece = () => {
       console.log(err);
     }
   };
-  console.log(videos);
   useEffect(() => {
     GetVideo();
   }, []);
@@ -90,7 +89,7 @@ const Piece = () => {
           <div className=" bg-black/65 absolute top-0 left-0 min-h-screen w-full bottom-0 -z-[1]"></div>
           <div className="flex items-start  flex-col  z-[100] w-full  mt-[27rem] md:mt-[30rem]     ">
             <div className="flex flex-wrap items-center  gap-4 ">
-              <h1 className="text-white/90 text-[22px] md:text-[40px] font-bold text-serif capitalize mr-2 leading-[18px]">
+              <h1 className="text-white/90 text-[22px] md:text-[40px] font-bold text-serif capitalize mr-2 leading-relaxed">
                 {item?.title}
               </h1>
               <button className="  text-[12px] md:text-[16px]   text-white/60 bg-transparent">
@@ -128,9 +127,10 @@ const Piece = () => {
                   dispatch(addToList(item));
 
                   setIcon(!icon);
+                  setActive(!active);
                 }}
-                className={`flex items-center md:text-[20px] text-[12px]  transition rounded-full  hover:text-black text-white/80 md:p-4 p-[12px]  ml-2   font-bold ${
-                  icon && "bg-gray-100 text-[#1b1b1b]"
+                className={`flex items-center md:text-[20px] text-[12px]  transition rounded-full   md:p-4 p-[12px]  ml-2   font-bold ${
+                  icon ? "bg-gray-100 text-black " : "bg-transparent text-white"
                 }`}
               >
                 {!icon ? <FaPlus size={15} /> : <FaCheck size={15} />}{" "}
@@ -210,7 +210,7 @@ const Piece = () => {
       </div>
       {active && (
         <div id="note" key={1} className="note text-[#018b2b]">
-          {exist?.original_name}
+          {exist?.title}
           <span className="text-black ml-1"> has been added</span>
         </div>
       )}

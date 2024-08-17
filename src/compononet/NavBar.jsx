@@ -12,6 +12,7 @@ import {
   MdTv,
 } from "react-icons/md";
 import { useState } from "react";
+import { useEffect } from "react";
 const NavBar = () => {
   const { user, logOut } = UserAuth();
   const navigate = useNavigate();
@@ -83,6 +84,7 @@ const NavBar = () => {
           <ul className="flex  md:gap-6  items-center font-sans down ">
             {links.map((li, i) => (
               <NavLink
+                id={li.name + i}
                 to={li.link}
                 className={({ isActive }) =>
                   isActive ? "text-[#7760f7] " : "text-white"
@@ -122,7 +124,7 @@ const NavBar = () => {
                 </button>
               </div>
             ) : (
-              <div className="md:mr-8 mr-2 flex">
+              <div className="md:mr-8 mr-2 flex items-center">
                 <Link to={"/logIn"}>
                   <button className="md:text-[16px] text-sm text-white font-semibold capitalize mx-4">
                     sing in{" "}

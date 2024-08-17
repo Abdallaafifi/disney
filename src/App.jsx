@@ -3,7 +3,7 @@ import "./index.css";
 import React, { useState } from "react";
 import Home from "./pages/home";
 import { AuthContextProvider } from "./context/AuthContext";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import NavBar from "./compononet/NavBar";
 import LogIn from "./pages/logIn";
 import SignUp from "./pages/signUp";
@@ -16,6 +16,7 @@ import SeriesPG from "./pages/seriesPG";
 import WatchList from "./redux/addToList";
 import WatchListed from "./pages/watchList";
 import { useEffect } from "react";
+import Search from "./pages/search";
 export const Items = () => {
   const data = JSON.parse(localStorage.getItem("new"));
   const [color, setColor] = useState();
@@ -120,6 +121,7 @@ const App = () => {
             <Route path="/signUp" Component={SignUp} />
             <Route path="/film/:id" Component={Piece} />
             <Route path="/movies" Component={MoviesPG} />
+            <Route path="/search" Component={Search} />
             <Route path="/series/" Component={SeriesPG} />
             <Route path="/watchlist" Component={WatchListed} />
             <Route path="/series/:id" Component={Series} />

@@ -33,6 +33,7 @@ const Movies = ({ title, url, keyId }) => {
         <h1 className="text-white blur-[.5px] md:text-[27px] text-sans tracking-[2px] text-[14px] capitalize font-[400] md:font-[600] ">
           {title}
         </h1>
+
         <Link to={"/movies"} className="text-white">
           <p className="text-white font-sans md:text-[16px] text-[12px] border-[2px] div rounded-[20px] md:px-6 px-4 py-1 capitalize leading-relaxed border-[#302f2f]">
             more
