@@ -71,17 +71,19 @@ const NavBar = () => {
       <div
         className={` ${
           scroll ? "bg-main/10" : "bg-transparent"
-        } md:h-[90px] h-[60px] fixed w-screen top-0 left-0  mb-2 z-[1000] transition `}
+        } sm:h-[60px] md:-h-[90px] h-[60px] fixed w-screen top-0 left-0  mb-2 z-[1000] transition `}
       >
-        <div className="w-full md:px-8 md:py-2 py-1 px-1  h-full flex items-center justify-between gap-0 md:gap-8 ">
-          <div className="sm:w-[190px] w-[130px] h-full">
-            <img
-              src="./images/viewers-pixar.png"
-              alt="img"
-              className="md:w-full w-[110px] h-full  md:ml-[-20px] ml-[-12px]  object-cover "
-            />
+        <div className="w-full sm:px-8 sm:py-2 py-1 px-1  h-full flex items-center justify-between gap-0 md:gap-8 ">
+          <div className="md:w-[170px] w-[130px] h-full">
+            <Link to={"/"}>
+              <img
+                src="./images/viewers-pixar.png"
+                alt="img"
+                className="sm:w-full w-[110px] h-full  sm:ml-[-20px] ml-[-12px]  object-cover "
+              />
+            </Link>
           </div>
-          <ul className="flex  md:gap-6  items-center font-sans down ">
+          <ul className="flex  sm:gap-4 md:gap-6 items-center font-sans down ">
             {links.map((li, i) => (
               <NavLink
                 id={li.name + i}
@@ -93,10 +95,12 @@ const NavBar = () => {
                 <li
                   className={` 
                 
-                flex  md:flex-row flex-col items-center md:gap-2 capitalize md:font-[600] `}
+                flex  sm:flex-row flex-col items-center sm:gap-2 capitalize sm:font-[600] `}
                 >
-                  <p className="md:text-[25px] text-[18px] ">{li.icon}</p>
-                  <p className="md:text-[20px] text-[13px] tracking-[1.1px] ">
+                  <p className="sm:text-[14px] md:text-[24px] text-[14px] ">
+                    {li.icon}
+                  </p>
+                  <p className="sm:text-[14px] md:text-[20px] text-[13px] tracking-[1.1px] ">
                     {li.name}
                   </p>
                 </li>
@@ -118,21 +122,21 @@ const NavBar = () => {
 
                 <button
                   onClick={() => handelLogOut()}
-                  className="md:text-[16px] text-sm text-black hover:text-white overflow-hidden transition font-semibold hover:bg-transparent border-red-600 border-2 capitalize py-1 md:py-2 px-4 bg-red-600 rounded hover:border-white/60   "
+                  className="sm:text-[16px] text-sm text-black hover:text-white overflow-hidden transition font-semibold hover:bg-transparent border-red-600 border-2 capitalize py-1 sm:py-2 px-4 bg-red-600 rounded hover:border-white/60   "
                 >
                   log out
                 </button>
               </div>
             ) : (
-              <div className="md:mr-8 mr-2 flex items-center">
+              <div className="sm:mr-8 mr-2 flex items-center">
                 <Link to={"/logIn"}>
-                  <button className="md:text-[16px] text-sm text-white font-semibold capitalize mx-4">
+                  <button className="sm:text-[12px] md:text-[16px] text-sm text-white font-semibold capitalize mx-4">
                     sing in{" "}
                   </button>
                 </Link>
 
                 <Link to={"/signUp"}>
-                  <button class="bg-[#0082c4e5] hover:bg-[#08c]/80  md:px-[18px] px-[8px] md:py-[12px] py-[5px]   md:text-[16px] text-sm  text-white font-[600] md:font-bold  rounded capitalize">
+                  <button class="bg-[#0082c4e5] hover:bg-[#08c]/80  sm:px-[12px] md:px-[18px] px-[8px] md:py-[8px] py-[5px]    md:text-[15px] text-sm  text-white font-[500] sm:font-bold  rounded capitalize">
                     sign up
                   </button>
                 </Link>

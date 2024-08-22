@@ -31,7 +31,7 @@ const Main = () => {
     GetData();
   }, []);
   return (
-    <div className="my-10 md:my-[6rem] px-3  w-full flex h-[320px] md:h-[480px] items-center gap-1 relative ">
+    <div className="my-10 sm:my-[4rem]  px-3  w-full flex h-[320px] md:h-[480px] items-center gap-1 relative ">
       <Swiper
         spaceBetween={20}
         autoplay={true}
@@ -46,9 +46,9 @@ const Main = () => {
               <img
                 src={`https://image.tmdb.org/t/p/original/${i?.backdrop_path}`}
                 alt={i?.title}
-                className=" md:w-[98%] w-[100%]   h-[260px] md:h-[480px] my-8  mx-auto    shadow-[0_2px_8px_3px_#000] rounded-[14px] object-cover    "
+                className=" md:w-[98%] w-[100%]   h-[260px]  sm:h-[320px] md:h-[420px] my-8  mx-auto    shadow-[0_2px_8px_3px_#000] rounded-[14px] object-cover    "
               />
-              <div className="absolute md:top-20 top-[80%] md:left-12 left-4 md:text-[40px] text-[15px] antialiased animation">
+              <div className="absolute sm:top-20 top-[80%] md:left-12 left-4 md:text-[40px] text-[15px] antialiased animation">
                 <p className="text-white/75 font-bold tracking-[2px]">
                   {i?.title}
                 </p>

@@ -51,37 +51,33 @@ const Movie = ({ item }) => {
           className={` 
           ${
             location.pathname === "/movies" || location.pathname === "/series"
-              ? "min-w-[100px] md:min-w-[220px] md:min-h-[320px]"
+              ? "min-w-[100px] sm:min-w-[190px] md:min-w-[220px ] sm:min-h-[280px] md:min-h-[320px]"
               : "min-w-[105px]  "
           }
-             md:min-w-[220px]  md:min-h-[320px]  overflow-hidden flex flex-col gap-1 items-start
-          my-0 md:my-5 md:hover:scale-[1.06] hover:scale-[1.01] md:rounded-[10px]   md:shadow-3xl   relative  hover:border-gray-200 transition duration-500  border-[#2e2e2e] md:border-[3px] `}
+             sm:min-w-[180px]  sm:min-h-[260px]  md:min-w-[220px]  md:min-h-[320px]  overflow-hidden flex flex-col gap-1 items-start
+          my-0 sm:my-5 sm:hover:scale-[1.06] hover:scale-[1.01] sm:rounded-[10px]   sm:shadow-3xl   relative  hover:border-gray-200 transition duration-500  border-[#2e2e2e] sm:border-[3px] `}
         >
           <img
-            className=" min-w-full md:h-[320px] flex-1  min-h-[150px]  rounded-[6px] object-cover shadow-3xl   "
+            className=" min-w-full sm:h-[260px] md:h-[220px] flex-1  min-h-[150px]  rounded-[6px] object-cover shadow-3xl   "
             src={`https://image.tmdb.org/t/p/original/${item?.poster_path}
           `}
           />
-          <div className="bg-black/75 md:rounded-lg rounded-[4px]  text-white absolute top-1 right-1 z-[5]">
+          <div className="bg-black/75 sm:rounded-lg rounded-[4px]  text-white absolute top-1 right-1 z-[5]">
             <p
-              className={`  md:text-[16px]  text-[11px] text-center leading-none font-[600] ${
-                item.vote_count < 1000
+              className={`  md:text-[16px]   text-[11px] text-center leading-none font-[600] ${
+                item.vote_count < 10
                   ? ""
-                  : "md:px-4 md:py-[6.8px] px-[5.5px] py-[3px] "
+                  : "md:px-4 sm:px-3 sm:py-1 md::py-[6.8px] px-[5.5px] py-[3px] "
               }`}
             >
               {
-                (item?.vote_count > 1200 ? "HD" : "CAM",
-                item.vote_count > 10000
-                  ? "HDRip"
-                  : item.vote_count < 1000
-                  ? " "
-                  : "TS")
+                (item?.vote_count < 1800 ? "HD" : "CAM",
+                item.vote_count > 10000 ? "HDRip" : "CAM")
               }
             </p>
           </div>
           {location.pathname === "/" && (
-            <p className="text-[#c2bebe] md:hidden block leading-none text-[9px] capitalize ">
+            <p className="text-[#c2bebe] sm:hidden block leading-none text-[9px] capitalize ">
               {item?.title
                 ? item?.title.slice(0, 18)
                 : item?.original_name.length > 18
@@ -92,7 +88,7 @@ const Movie = ({ item }) => {
         </Link>
       ) : (
         <div
-          className="  md:min-w-[280px] min-w-[120px] md:h-[170px] h-[140px]
+          className="  sm:min-w-[280px] min-w-[120px] sm:h-[170px] h-[140px]
          my-5 hover:scale-[1.06] rounded-[6px] shadow-3xl  overflow-hidden relative  hover:border-gray-200 transition duration-[200ms] ease-in  border-[#2e2e2e] border-[3px] `}"
         >
           <Link

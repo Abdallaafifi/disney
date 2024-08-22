@@ -30,7 +30,7 @@ const Movies = ({ title, url, keyId }) => {
   return (
     <div className="  md:my-6 my-6   select-none ">
       <div className="flex  justify-between items-center">
-        <h1 className="text-white blur-[.5px] md:text-[27px] text-sans tracking-[2px] text-[14px] capitalize font-[400] md:font-[600] ">
+        <h1 className="text-white blur-[.5px] md:text-[27px] text-sans tracking-[2px] text-[12px] capitalize font-[400] md:font-[600] ">
           {title}
         </h1>
 
