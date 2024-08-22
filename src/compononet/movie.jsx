@@ -70,10 +70,7 @@ const Movie = ({ item }) => {
                   : "md:px-4 sm:px-3 sm:py-1 md::py-[6.8px] px-[5.5px] py-[3px] "
               }`}
             >
-              {
-                (item?.vote_count < 1800 ? "HD" : "CAM",
-                item.vote_count > 10000 ? "HDRip" : "CAM")
-              }
+              {item.vote_count > 10000 ? "HDRip" : "HD"}
             </p>
           </div>
           {location.pathname === "/" && (
